@@ -33,7 +33,7 @@ test('getURLsFromHTML absolute', ()=> {
     const inputHTMLBody =  `
     <html>
         <body>
-            <a href="https://blog.boot.dev">
+            <a href="https://blog.boot.dev/">
                 Boot.dev Blog
             </a>
         </body>
@@ -41,7 +41,7 @@ test('getURLsFromHTML absolute', ()=> {
     `
     
 
-    const inputBaseURL = "https://blog.boot.dev/"
+    const inputBaseURL = "https://blog.boot.dev"
     const actual = getURLsFromHTML(inputHTMLBody, inputBaseURL)
     const expected = ["https://blog.boot.dev/"]
     expect(actual).toEqual(expected)
